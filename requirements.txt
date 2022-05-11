@@ -1,4 +1,4 @@
-streamlit=1.9.0
+streamlit
 streamlit-option-menu
 binance==0.1
 fbprophet
