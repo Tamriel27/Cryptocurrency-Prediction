@@ -202,10 +202,12 @@ elif choose == 'Prediction':
     st.write(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(20))
         
     st.write(f'Forecast plot')
+    st.write('The graph shows the actual (black dots) and predicted (blue line) values over time')
     fig1 = plot_plotly(m, forecast)
     st.plotly_chart(fig1)
 
     st.write('Forecast components')
+    st.write('The following plots show a high level trend of predicted values')
     fig2 = m.plot_components(forecast)
     st.write(fig2)
     
