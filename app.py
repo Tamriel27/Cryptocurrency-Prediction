@@ -12,7 +12,7 @@ from streamlit_option_menu import option_menu
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
-# from prophet.plot import add_changepoints_to_plot
+from prophet.plot import add_changepoints_to_plot
 
 
 # Initializing the Binance Client
