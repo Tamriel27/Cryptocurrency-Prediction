@@ -152,6 +152,8 @@ elif choose == 'Prediction':
         data = data.reset_index(drop=True)
         data['Open Time'] = pd.to_datetime(data['Open Time']/1000, unit='s')
         data['Close Time'] = pd.to_datetime(data['Close Time']/1000, unit='s')
+        numeric_columns = ['Open', 'High', 'Low', 'Close', 'Volume', 'Quote Asset Volume', 'TB Base Volume', 'TB Quote Volume']
+        data[numeric_columns] = data[numeric_columns].apply(pd.to_numeric, axis=1)
         return data
     
     data_load_state = st.text('Loading data...')
@@ -160,9 +162,12 @@ elif choose == 'Prediction':
 
     st.subheader('Raw data')
     st.write(data.head())
+    # MPFinance
+    fin = mpf.plot(data.set_index('Close Time').tail(100), type='candle', style='charles', volume=True, mav=(10, 20))
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+    st.pyplot(fin)
     
     
-#     mpf.plot(data.set_index('Close Time').tail(100), type='candle', style='charles', volume=True, mav=(10, 20))
     
     # Plot Raw Data
     def plot_raw_data():
