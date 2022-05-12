@@ -205,8 +205,8 @@ elif choose == 'Prediction':
     
     st.write('Automatic changepoint detection')
     fig = m.plot(forecast)
-#     a = add_changepoints_to_plot(fig.gca(), m, forecast)
-#     st.write(fig)
+    a = add_changepoints_to_plot(fig.gca(), m, forecast)
+    st.write(fig)
 
 # Twitter
 elif choose == 'Twitter':
