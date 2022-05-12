@@ -208,8 +208,8 @@ elif choose == 'Prediction':
     fig2 = m.plot_components(forecast)
     st.write(fig2)
     
-    st.write('Automatic changepoint detection')
-    fig = m.plot(forecast)
+#     st.write('Automatic changepoint detection')
+#     fig = m.plot(forecast)
 #     a = add_changepoints_to_plot(fig.gca(), m, forecast)
 #     st.write(fig)
 
