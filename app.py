@@ -198,6 +198,7 @@ elif choose == 'Prediction':
 
     # Show and plot forecast
     st.subheader('Forecast data')
+    st.write('The following table shows future predicted values. 'yhat' is the predicted value; upper and lower limits are 80% confidence intervals by default')
     st.write(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(20))
         
     st.write(f'Forecast plot')
