@@ -12,7 +12,7 @@ from streamlit_option_menu import option_menu
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
-from prophet.plot import add_changepoints_to_plot
+# from prophet.plot import add_changepoints_to_plot
 
 
 # Initializing the Binance Client
@@ -205,8 +205,8 @@ elif choose == 'Prediction':
     
     st.write('Automatic changepoint detection')
     fig = m.plot(forecast)
-    a = add_changepoints_to_plot(fig.gca(), m, forecast)
-    st.write(fig)
+#     a = add_changepoints_to_plot(fig.gca(), m, forecast)
+#     st.write(fig)
 
 # Twitter
 elif choose == 'Twitter':
