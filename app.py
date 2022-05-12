@@ -7,7 +7,7 @@ import time
 import base64
 import tweepy
 import config
-# import mplfinance as mpf
+import mplfinance as mpf
 from streamlit_option_menu import option_menu
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
