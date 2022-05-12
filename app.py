@@ -7,7 +7,7 @@ import time
 import base64
 import tweepy
 import config
-import mplfinance as mpf
+# import mplfinance as mpf
 from streamlit_option_menu import option_menu
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
@@ -161,8 +161,8 @@ elif choose == 'Prediction':
     st.subheader('Raw data')
     st.write(data.head())
     
-    # MPF
-    mpf.plot(data.set_index('Close Time').tail(100), type='candle', style='charles', volume=True, mav=(10, 20))
+    
+#     mpf.plot(data.set_index('Close Time').tail(100), type='candle', style='charles', volume=True, mav=(10, 20))
     
     # Plot Raw Data
     def plot_raw_data():
